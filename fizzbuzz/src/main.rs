@@ -5,11 +5,13 @@ fn main() {
     }
 }
 
-fn fizzbuzz(num: i32) -> String {
+fn fizzbuzz(num: i32) -> &'static str {
+    let str_num: &str = &num.to_string();
+
     match num {
-        num if num % 3 == 0 => return "Fizz".to_string(),
-        num if num % 5 == 0 => return "Buzz".to_string(),
-        num if num % 15 == 0 => return "FizzBuzz".to_string(),
-        _ => return num.to_string()
+        num if num % 3 == 0 => return "Fizz",
+        num if num % 5 == 0 => return "Buzz",
+        num if num % 15 == 0 => return "FizzBuzz",
+        _ => return str_num
     }
 }
