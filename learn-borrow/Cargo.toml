@@ -1,0 +1,7 @@
+[package]
+name = "learn-borrow"
+version = "0.1.0"
+authors = ["happysiro <happy.siro@gmail.com>"]
+edition = "2018"
+
+[dependencies]
